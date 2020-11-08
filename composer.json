@@ -1,0 +1,21 @@
+{
+  "name": "abmmhasan/uuid",
+  "description": "UUID (v1, v3-v5) Generator (RFC4122)",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "abmmhasan",
+      "email": "abmmhasan346@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "AbmmHasan\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.1"
+  }
+}
