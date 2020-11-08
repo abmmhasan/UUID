@@ -24,12 +24,12 @@ composer require abmmhasan/uuid
 /**
 * Get v1 UUID (Time based)
 */
-Uuid::v1();
+\AbmmHasan\Uuid::v1();
 
 /**
 * Get v4 UUID (completely random)
 */
-Uuid::v4();
+\AbmmHasan\Uuid::v4();
 ```
 
 ### v3 & v5
@@ -38,24 +38,24 @@ Uuid::v4();
 /**
 * Get v3 or v5 UUID for 'TestString' (default X500 namespace)
 */
-Uuid::v3('TestString');
+\AbmmHasan\Uuid::v3('TestString');
 // or
-Uuid::v5('TestString');
+\AbmmHasan\Uuid::v5('TestString');
 
 /**
 * Get v3 or v5 UUID for an URL & pre-defined namespace
 * You can pass X500, URL, OID, DNS (check RFC4122 #Appendix C)
 */
-Uuid::v3('abmmhasan.github.io','url');
+\AbmmHasan\Uuid::v3('abmmhasan.github.io','url');
 // or
-Uuid::v5('abmmhasan.github.io','url');
+\AbmmHasan\Uuid::v5('abmmhasan.github.io','url');
 
 /**
 * You can generate a random UUID & use as namespace as well
 */
-Uuid::v3('abmmhasan.github.io','fa1700dd-828c-4d1b-8e6d-a6104807da90');
+\AbmmHasan\Uuid::v3('abmmhasan.github.io','fa1700dd-828c-4d1b-8e6d-a6104807da90');
 // or
-Uuid::v5('abmmhasan.github.io','fa1700dd-828c-4d1b-8e6d-a6104807da90');
+\AbmmHasan\Uuid::v5('abmmhasan.github.io','fa1700dd-828c-4d1b-8e6d-a6104807da90');
 ```
 
 ## Support
