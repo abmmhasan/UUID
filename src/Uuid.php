@@ -11,22 +11,22 @@ class Uuid
         'x500' => 3
     ];
 
+    private static $node;
+
     /**
      * Generate UUID v1 string
      *
+     * @param null|string $node
      * @return string
      * @throws \Exception
      */
-    public static function v1()
+    public static function v1($node = null)
     {
         $time = microtime(false);
         $time = substr($time, 11) . substr($time, 2, 7);
         $time = str_pad(dechex($time + 0x01b21dd213814000), 16, '0', STR_PAD_LEFT);
         $clockSeq = random_int(0, 0x3fff);
-        $node = sprintf('%06x%06x',
-            random_int(0, 0xffffff) | 0x010000,
-            random_int(0, 0xffffff)
-        );
+        $node = $node ?? self::getNode();
         return sprintf('%08s-%04s-1%03s-%04x-%012s',
             substr($time, -8),
             substr($time, -12, 4),
@@ -81,6 +81,23 @@ class Uuid
         }
         $hash = sha1(hex2bin($ns) . $string);
         return self::output(5, $hash);
+    }
+
+    /**
+     * Get generated Node (for v1)
+     *
+     * @return string
+     * @throws \Exception
+     */
+    public static function getNode()
+    {
+        if (self::$node) {
+            return self::$node;
+        }
+        return self::$node = sprintf('%06x%06x',
+            random_int(0, 0xffffff) | 0x010000,
+            random_int(0, 0xffffff)
+        );
     }
 
     private static function output(int $version, string $string)

@@ -18,7 +18,7 @@ composer require abmmhasan/uuid
 
 ## Usage
 
-### v1 & v4
+### v1
 
 ```php
 /**
@@ -26,6 +26,20 @@ composer require abmmhasan/uuid
 */
 \AbmmHasan\Uuid::v1();
 
+/**
+* Get generated node, for further use
+*/
+$node = \AbmmHasan\Uuid::getNode();
+
+/**
+* Pass your pre-generated node (for node specific UUID)
+*/
+\AbmmHasan\Uuid::v1($node);
+```
+
+### v4
+
+```php
 /**
 * Get v4 UUID (completely random)
 */
@@ -56,6 +70,14 @@ composer require abmmhasan/uuid
 \AbmmHasan\Uuid::v3('abmmhasan.github.io','fa1700dd-828c-4d1b-8e6d-a6104807da90');
 // or
 \AbmmHasan\Uuid::v5('abmmhasan.github.io','fa1700dd-828c-4d1b-8e6d-a6104807da90');
+```
+
+### v2
+
+```php
+/** 
+* Not supported! 
+*/
 ```
 
 ## Support
