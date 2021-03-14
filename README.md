@@ -37,6 +37,26 @@ $node = \AbmmHasan\Uuid::getNode();
 \AbmmHasan\Uuid::v1($node);
 ```
 
+### v3
+
+```php
+/**
+* Get v3 UUID for 'TestString' (default X500 namespace)
+*/
+\AbmmHasan\Uuid::v3('TestString');
+
+/**
+* Get v3 UUID for an URL & pre-defined namespace
+* You can pass X500, URL, OID, DNS (check RFC4122 #Appendix C)
+*/
+\AbmmHasan\Uuid::v3('abmmhasan.github.io','url');
+
+/**
+* You can generate a random UUID & use as namespace as well
+*/
+\AbmmHasan\Uuid::v3('abmmhasan.github.io','fa1700dd-828c-4d1b-8e6d-a6104807da90');
+```
+
 ### v4
 
 ```php
@@ -46,29 +66,23 @@ $node = \AbmmHasan\Uuid::getNode();
 \AbmmHasan\Uuid::v4();
 ```
 
-### v3 & v5
+### v5
 
 ```php
 /**
-* Get v3 or v5 UUID for 'TestString' (default X500 namespace)
+* Get v5 UUID for 'TestString' (default X500 namespace)
 */
-\AbmmHasan\Uuid::v3('TestString');
-// or
 \AbmmHasan\Uuid::v5('TestString');
 
 /**
-* Get v3 or v5 UUID for an URL & pre-defined namespace
+* Get v5 UUID for an URL & pre-defined namespace
 * You can pass X500, URL, OID, DNS (check RFC4122 #Appendix C)
 */
-\AbmmHasan\Uuid::v3('abmmhasan.github.io','url');
-// or
 \AbmmHasan\Uuid::v5('abmmhasan.github.io','url');
 
 /**
 * You can generate a random UUID & use as namespace as well
 */
-\AbmmHasan\Uuid::v3('abmmhasan.github.io','fa1700dd-828c-4d1b-8e6d-a6104807da90');
-// or
 \AbmmHasan\Uuid::v5('abmmhasan.github.io','fa1700dd-828c-4d1b-8e6d-a6104807da90');
 ```
 
