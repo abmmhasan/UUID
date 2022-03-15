@@ -2,13 +2,12 @@
 
 ![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/abmmhasan/uuid/main)
 ![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/abmmhasan/uuid)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/abmmhasan/uuid)
-![Lines of code](https://img.shields.io/tokei/lines/github/abmmhasan/uuid)
 ![Packagist Downloads](https://img.shields.io/packagist/dt/abmmhasan/uuid)
-![GitHub issues](https://img.shields.io/github/issues/abmmhasan/uuid)
 ![Packagist License](https://img.shields.io/packagist/l/abmmhasan/uuid)
 ![Packagist Version](https://img.shields.io/packagist/v/abmmhasan/uuid)
 ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/abmmhasan/uuid)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/abmmhasan/uuid)
+![Lines of code](https://img.shields.io/tokei/lines/github/abmmhasan/uuid)
 
 UUID (v1, v3-v5) Generator (RFC4122)
 
