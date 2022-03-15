@@ -1,6 +1,6 @@
 # UUID
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Latest Stable Version](http://poser.pugx.org/abmmhasan/uuid/v)](https://packagist.org/packages/abmmhasan/uuid) [![Total Downloads](http://poser.pugx.org/abmmhasan/uuid/downloads)](https://packagist.org/packages/abmmhasan/uuid) [![Latest Unstable Version](http://poser.pugx.org/abmmhasan/uuid/v/unstable)](https://packagist.org/packages/abmmhasan/uuid) [![License](http://poser.pugx.org/abmmhasan/uuid/license)](https://packagist.org/packages/abmmhasan/uuid) [![PHP Version Require](http://poser.pugx.org/abmmhasan/uuid/require/php)](https://packagist.org/packages/abmmhasan/uuid)
 
 
 UUID (v1, v3-v5) Generator (RFC4122)
