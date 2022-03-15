@@ -1,7 +1,14 @@
 # UUID
 
-[![Latest Stable Version](http://poser.pugx.org/abmmhasan/uuid/v)](https://packagist.org/packages/abmmhasan/uuid) [![Total Downloads](http://poser.pugx.org/abmmhasan/uuid/downloads)](https://packagist.org/packages/abmmhasan/uuid) [![Latest Unstable Version](http://poser.pugx.org/abmmhasan/uuid/v/unstable)](https://packagist.org/packages/abmmhasan/uuid) [![License](http://poser.pugx.org/abmmhasan/uuid/license)](https://packagist.org/packages/abmmhasan/uuid) [![PHP Version Require](http://poser.pugx.org/abmmhasan/uuid/require/php)](https://packagist.org/packages/abmmhasan/uuid)
-
+![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/abmmhasan/uuid/main)
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/abmmhasan/uuid)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/abmmhasan/uuid)
+![Lines of code](https://img.shields.io/tokei/lines/github/abmmhasan/uuid)
+![Packagist Downloads](https://img.shields.io/packagist/dt/abmmhasan/uuid)
+![GitHub issues](https://img.shields.io/github/issues/abmmhasan/uuid)
+![Packagist License](https://img.shields.io/packagist/l/abmmhasan/uuid)
+![Packagist Version](https://img.shields.io/packagist/v/abmmhasan/uuid)
+![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/abmmhasan/uuid)
 
 UUID (v1, v3-v5) Generator (RFC4122)
 
