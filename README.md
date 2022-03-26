@@ -1,9 +1,10 @@
 # UUID
 
-![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/abmmhasan/uuid/main)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/abmmhasan/uuid/build)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b94b63f507ff4b91be4353e3a98c3fe3)](https://www.codacy.com/gh/abmmhasan/uuid/dashboard)
 ![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/abmmhasan/uuid)
 ![Packagist Downloads](https://img.shields.io/packagist/dt/abmmhasan/uuid)
-![Packagist License](https://img.shields.io/packagist/l/abmmhasan/uuid)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 ![Packagist Version](https://img.shields.io/packagist/v/abmmhasan/uuid)
 ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/abmmhasan/uuid)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/abmmhasan/uuid)
