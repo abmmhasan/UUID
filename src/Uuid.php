@@ -48,11 +48,11 @@ class Uuid
      */
     public static function v3(string $string, string $namespace = 'x500'): string
     {
-        $ns = self::nsResolve($namespace);
-        if (!$ns) {
+        $namespace = self::nsResolve($namespace);
+        if (!$namespace) {
             throw new Exception('Invalid NameSpace!');
         }
-        $hash = md5(hex2bin($ns) . $string);
+        $hash = md5(hex2bin($namespace) . $string);
         return self::output(3, $hash);
     }
 
