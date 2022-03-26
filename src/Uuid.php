@@ -2,6 +2,8 @@
 
 namespace AbmmHasan;
 
+use Exception;
+
 class Uuid
 {
     private static $nsList = [
@@ -16,11 +18,11 @@ class Uuid
     /**
      * Generate UUID v1 string
      *
-     * @param null|string $node
+     * @param string|null $node
      * @return string
-     * @throws \Exception
+     * @throws Exception
      */
-    public static function v1($node = null)
+    public static function v1(string $node = null): string
     {
         $time = microtime(false);
         $time = substr($time, 11) . substr($time, 2, 7);
@@ -42,13 +44,13 @@ class Uuid
      * @param string $string
      * @param string $namespace
      * @return string
-     * @throws \Exception
+     * @throws Exception
      */
-    public static function v3(string $string, string $namespace = 'x500')
+    public static function v3(string $string, string $namespace = 'x500'): string
     {
         $ns = self::nsResolve($namespace);
         if (!$ns) {
-            throw new \Exception('Invalid NameSpace!');
+            throw new Exception('Invalid NameSpace!');
         }
         $hash = md5(hex2bin($ns) . $string);
         return self::output(3, $hash);
@@ -58,8 +60,9 @@ class Uuid
      * Generate UUID v4 Random string
      *
      * @return string
+     * @throws Exception
      */
-    public static function v4()
+    public static function v4(): string
     {
         $string = bin2hex(random_bytes(16));
         return self::output(4, $string);
@@ -71,15 +74,15 @@ class Uuid
      * @param string $string
      * @param string $namespace
      * @return string
-     * @throws \Exception
+     * @throws Exception
      */
-    public static function v5(string $string, string $namespace = 'x500')
+    public static function v5(string $string, string $namespace = 'x500'): string
     {
-        $ns = self::nsResolve($namespace);
-        if (!$ns) {
-            throw new \Exception('Invalid NameSpace!');
+        $namespace = self::nsResolve($namespace);
+        if (!$namespace) {
+            throw new Exception('Invalid NameSpace!');
         }
-        $hash = sha1(hex2bin($ns) . $string);
+        $hash = sha1(hex2bin($namespace) . $string);
         return self::output(5, $hash);
     }
 
@@ -87,9 +90,9 @@ class Uuid
      * Get generated Node (for v1)
      *
      * @return string
-     * @throws \Exception
+     * @throws Exception
      */
-    public static function getNode()
+    public static function getNode(): string
     {
         if (self::$node) {
             return self::$node;
@@ -100,7 +103,12 @@ class Uuid
         );
     }
 
-    private static function output(int $version, string $string)
+    /**
+     * @param int $version
+     * @param string $string
+     * @return string
+     */
+    private static function output(int $version, string $string): string
     {
         $string = str_split($string, 4);
         return sprintf("%08s-%04s-{$version}%03s-%04x-%012s",
@@ -116,14 +124,18 @@ class Uuid
         if (self::isValid($namespace)) {
             return str_replace('-', '', $namespace);
         }
-        $ns = str_replace(['namespace', 'ns', '_'], '', strtolower($namespace));
-        if (isset(self::$nsList[$ns])) {
-            return "6ba7b81" . self::$nsList[$ns] . "9dad11d180b400c04fd430c8";
+        $namespace = str_replace(['namespace', 'ns', '_'], '', strtolower($namespace));
+        if (isset(self::$nsList[$namespace])) {
+            return "6ba7b81" . self::$nsList[$namespace] . "9dad11d180b400c04fd430c8";
         }
         return false;
     }
 
-    private static function isValid($uuid)
+    /**
+     * @param $uuid
+     * @return bool
+     */
+    private static function isValid($uuid): bool
     {
         return (bool)preg_match('{^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$}Di', $uuid);
     }
