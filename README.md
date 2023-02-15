@@ -1,6 +1,6 @@
 # UUID
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/abmmhasan/uuid/build)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/abmmhasan/uuid/ci.yml?branch=main)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b94b63f507ff4b91be4353e3a98c3fe3)](https://www.codacy.com/gh/abmmhasan/UUID/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=abmmhasan/UUID&amp;utm_campaign=Badge_Grade)
 ![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/abmmhasan/uuid)
 ![Packagist Downloads](https://img.shields.io/packagist/dt/abmmhasan/uuid)
