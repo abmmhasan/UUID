@@ -6,12 +6,15 @@
   "authors": [
     {
       "name": "abmmhasan",
-      "email": "abmmhasan346@gmail.com"
+      "email": "abmmhasan@gmail.com"
     }
   ],
   "autoload": {
+    "files": [
+      "src/functions.php"
+    ],
     "psr-4": {
-      "AbmmHasan\\": "src/"
+      "AbmmHasan\\UUID\\": "src/"
     }
   },
   "minimum-stability": "stable",
