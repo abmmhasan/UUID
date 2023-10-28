@@ -8,7 +8,6 @@
 ![Packagist Version](https://img.shields.io/packagist/v/abmmhasan/uuid)
 ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/abmmhasan/uuid)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/abmmhasan/uuid)
-![Lines of code](https://img.shields.io/tokei/lines/github/abmmhasan/uuid)
 
 UUID (v1, v3-v5) Generator (RFC4122)
 
