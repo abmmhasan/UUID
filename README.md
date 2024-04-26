@@ -11,6 +11,7 @@
 
 UUID (v1, v3-v5) Generator (RFC4122)
 
+> Note: If your library uses PHP version 8 or higher it is recommended to use [infocyph/UID](https://github.com/infocyph/UID) instead.
 
 ## Prerequisites
 

@@ -18,6 +18,9 @@
     }
   },
   "minimum-stability": "stable",
+  "suggest": {
+    "inforcyph/uid": "If your library uses PHP version 8 or higher, it is recommended to use [infocyph/UID](https://github.com/infocyph/UID) instead."
+  },
   "require": {
     "php": ">=7.1"
   }
